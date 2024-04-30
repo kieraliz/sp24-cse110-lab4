@@ -44,3 +44,36 @@ c. We access the student greeting with `student.greeting()` <br>
 d. We access the student Favorite Teacher with `student["Favorite Teacher"].name` <br>
 e. We access the student courseLoad at index 0 with `student.courseLoad[0]`
 
+**Q13**: <br>
+a. The number 2 is converted to a string '2' for the concatenation operation. The result is '3' + '2' = `32 (string)`<br>
+b. The string '3' is converted to a number 3 for the subtraction operation. The result is 3 - 2 = `1 (number)` <br>
+c. The null is converted to its numeric conversion 0 for the addition operation. The result is 3 + 0 = `3 (number)` <br>
+d. The null is converted to a string for the concatenation operation. The result is '3' + 'null' = `3null (string)` <br>
+e. The boolean true is converted to its numeric conversion 1 for the addition operation. The result is 1 + 3 = `4 (number)` <br>
+f. The false is converted to its numeric conversion 0, and the null is converted to its numeric conversion 0 for the addition operation. The result is 0 + 0 = `0 (number)` <br>
+g. The undefined is converted to a string for the concatenation operation. The result is '3' + 'undefined' = `3undefined (string)` <br>
+h. The '3' is converted to a number 3, and the undefined is converted to its numeric conversion NaN for the subtraction operation. The result is 3 - NaN = `NaN (number)`
+
+**Q14**: <br>
+a. The '2' is converted to a number 2. When we make the number comparison 2 > 1, we get `true` <br>
+b. We compare the first characters of the string, which will be '2' < '1'. Since '2' is lexigraphically higher than '1', then we get `false` <br>
+c. The number 2 is converted to a string '2'. When we make the comparison '2' == '2', we get `true` <br>
+d. We have two data types: the number 2 and the string '2'. When we make the comparison 2 === '2', we get `false` <br>
+e. The boolean true is converted to its numeric conversion 1. When we compare the numbers 1 == 2, we get `false` <br>
+f. The number 2 is a non-zero number so when we take Boolean(2) we get true. Then when compare the booleans true === true, we get `true`. 
+
+**Q15**: The `==` equality check performs type conversions, while the `===` doesn't perform type conversions. 
+
+**Q16**: See the file part2-question16.js
+
+**Q17**: First, we make the function call to modifyArray in line 13. We create an empty array `newArr = []` in line 2. We iterate through the for loop for every element of the array parameter `[1,2,3]`. The very first time we enter line 4, we do `callback(1)` which becomes `doSomething(1)` (coming from our second parameter in line 13). This brings us to our doSomething function in lines 9-11 and returns 2. This result is returned to line 4 and pushed onto newArr. We repeat this method for the other values in the array. The final result is the array `[2,4,6]`
+
+**Q18**: See the file part2-question18.js
+
+**Q19**: First we print out 1 and 4 instantly with no delay. The next line #3 will execute after a 1 second delay. During this time of delay, the next line #4 starts to execute after a 0 second delay. This will print first the 3 then 2. In the end we get
+```
+1
+4
+3
+2
+```
